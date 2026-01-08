@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb35de8rgpvgj"
+path="res://.godot/imported/SpotiDownloader.com - Dr Perky - Craig Maxx.mp3-d4698b5d489fdbb13a301a738a7e053a.mp3str"
+
+[deps]
+
+source_file="res://SpotiDownloader.com - Dr Perky - Craig Maxx.mp3"
+dest_files=["res://.godot/imported/SpotiDownloader.com - Dr Perky - Craig Maxx.mp3-d4698b5d489fdbb13a301a738a7e053a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
