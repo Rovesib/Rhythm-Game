@@ -1,13 +1,67 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgvmmtrkiqygn"]
+[gd_scene load_steps=4 format=3 uid="uid://dgvmmtrkiqygn"]
 
 [ext_resource type="Script" uid="uid://bndu3pr8dtqxr" path="res://rhythm_game.gd" id="1_svhef"]
+[ext_resource type="Texture2D" uid="uid://rxo4kq75gvwi" path="res://Firefly_Gemini Flash_a background image for a video game starting screen, put dr perky sodas and smiling s 47780.png" id="2_snvp4"]
 [ext_resource type="AudioStream" uid="uid://cb35de8rgpvgj" path="res://SpotiDownloader.com - Dr Perky - Craig Maxx.mp3" id="2_u18y0"]
 
-[node name="rhythm game" type="Node2D"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_svhef")
+
+[node name="FireflyGeminiFlashABackgroundImageForAVideoGameStartingScreen,PutDrPerkySodasAndSmilingS47780" type="Sprite2D" parent="."]
+position = Vector2(569, 321)
+scale = Vector2(0.9746622, 0.75)
+texture = ExtResource("2_snvp4")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_u18y0")
 volume_db = -9.541
 pitch_scale = 1.04
 autoplay = true
+
+[node name="HitLine" type="ColorRect" parent="."]
+offset_left = 722.0
+offset_top = 567.0
+offset_right = 741.685
+offset_bottom = 1008.7068
+rotation = 1.5707964
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier" type="ColorRect" parent="."]
+offset_left = 399.0
+offset_top = 568.0
+offset_right = 405.13635
+offset_bottom = 1139.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier 1" type="ColorRect" parent="."]
+offset_left = 582.0
+offset_top = 569.0
+offset_right = 588.13635
+offset_bottom = 1140.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier 2" type="ColorRect" parent="."]
+offset_left = 691.0
+offset_top = 567.0
+offset_right = 705.4009
+offset_bottom = 1138.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier 4" type="ColorRect" parent="."]
+offset_left = 304.0
+offset_top = 567.0
+offset_right = 318.40088
+offset_bottom = 1138.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier 3" type="ColorRect" parent="."]
+offset_left = 489.0
+offset_top = 568.0
+offset_right = 495.13635
+offset_bottom = 1139.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)

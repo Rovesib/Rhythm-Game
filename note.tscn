@@ -3,12 +3,9 @@
 [ext_resource type="Script" uid="uid://dnw23ittflph2" path="res://note.gd" id="1_wn01w"]
 [ext_resource type="Texture2D" uid="uid://bkmisu5piaau5" path="res://arrow.png" id="2_lyp5m"]
 
-[node name="Note" type="Node2D"]
+[node name="Note" type="Node2D" groups=["notes"]]
 script = ExtResource("1_wn01w")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(50, 50.000004)
 scale = Vector2(0.1742287, 0.16333935)
 texture = ExtResource("2_lyp5m")
