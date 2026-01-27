@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://c6cox5gronvfa"]
+[gd_scene load_steps=5 format=3 uid="uid://c6cox5gronvfa"]
+
+[ext_resource type="Script" uid="uid://de8spk8i775yk" path="res://startscreen.gd" id="1_1yvcn"]
+[ext_resource type="FontFile" uid="uid://36ttb6wssstq" path="res://acidrop/Acidrop Demo.ttf" id="2_x6rvy"]
+[ext_resource type="FontFile" uid="uid://hlq3vs288dxn" path="res://roblox_2/RobloxFont-Regular.ttf" id="3_bprvm"]
+[ext_resource type="Texture2D" uid="uid://mec7wqb3xpyt" path="res://perky.png" id="4_8xq5q"]
 
 [node name="Startscreen" type="Node2D"]
+script = ExtResource("1_1yvcn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 642.0
+color = Color(0.14406255, 0.14406255, 0.14406255, 1)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 350.0
+offset_top = 233.0
+offset_right = 771.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("2_x6rvy")
+theme_override_font_sizes/font_size = 30
+text = "Dr Perky level"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 70.0
+offset_right = 849.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("3_bprvm")
+theme_override_font_sizes/font_size = 82
+text = "The music tapper"
+
+[node name="Perky" type="Sprite2D" parent="."]
+position = Vector2(167, 361)
+texture = ExtResource("4_8xq5q")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

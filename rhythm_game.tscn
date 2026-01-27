@@ -18,7 +18,9 @@ volume_db = -9.541
 pitch_scale = 1.04
 autoplay = true
 
-[node name="HitLine" type="ColorRect" parent="."]
+[node name="Hitlines" type="Node2D" parent="."]
+
+[node name="HitLine" type="ColorRect" parent="Hitlines"]
 offset_left = 722.0
 offset_top = 567.0
 offset_right = 741.685
@@ -26,7 +28,7 @@ offset_bottom = 1008.7068
 rotation = 1.5707964
 color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
 
-[node name="line barrier" type="ColorRect" parent="."]
+[node name="line barrier" type="ColorRect" parent="Hitlines"]
 offset_left = 399.0
 offset_top = 568.0
 offset_right = 405.13635
@@ -34,7 +36,7 @@ offset_bottom = 1139.4517
 rotation = 3.1415927
 color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
 
-[node name="line barrier 1" type="ColorRect" parent="."]
+[node name="line barrier 1" type="ColorRect" parent="Hitlines"]
 offset_left = 582.0
 offset_top = 569.0
 offset_right = 588.13635
@@ -42,7 +44,15 @@ offset_bottom = 1140.4517
 rotation = 3.1415927
 color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
 
-[node name="line barrier 2" type="ColorRect" parent="."]
+[node name="line barrier 3" type="ColorRect" parent="Hitlines"]
+offset_left = 489.0
+offset_top = 568.0
+offset_right = 495.13635
+offset_bottom = 1139.4517
+rotation = 3.1415927
+color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
+
+[node name="line barrier 2" type="ColorRect" parent="Hitlines"]
 offset_left = 691.0
 offset_top = 567.0
 offset_right = 705.4009
@@ -50,18 +60,10 @@ offset_bottom = 1138.4517
 rotation = 3.1415927
 color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
 
-[node name="line barrier 4" type="ColorRect" parent="."]
+[node name="line barrier 4" type="ColorRect" parent="Hitlines"]
 offset_left = 304.0
 offset_top = 567.0
 offset_right = 318.40088
 offset_bottom = 1138.4517
-rotation = 3.1415927
-color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
-
-[node name="line barrier 3" type="ColorRect" parent="."]
-offset_left = 489.0
-offset_top = 568.0
-offset_right = 495.13635
-offset_bottom = 1139.4517
 rotation = 3.1415927
 color = Color(0.003007907, 0.0031562939, 0.0032066845, 1)
