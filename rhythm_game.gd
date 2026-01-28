@@ -21,6 +21,16 @@ var last_spawned_beat = -1
 # Spawn a note every X beats
 var beats_per_note = 2
 
+# How many misses
+var miss_count = 0
+
+# Max amount of misses
+var max_misses = 5
+
+# end game
+var game_over = false
+
+
 
 func _ready() -> void:
 	randomize()
@@ -42,6 +52,15 @@ func _process(delta: float) -> void:
 		if current_beat % beats_per_note == 0 and current_beat != last_spawned_beat:
 			last_spawned_beat = current_beat
 			spawn_note(randi() % lanes.size())
+			
+	# End game when song finishes
+	if not $Music.playing and not game_over:
+		end_game()
+
+func end_game():
+	game_over = true
+	print("GAME OVER")
+	get_tree().change_scene_to_file("res://end_screen.tscn")
 
 
 func _unhandled_input(event):
@@ -70,8 +89,16 @@ func check_hit(lane):
 		if note.is_in_group("notes") and note.lane_index == lane:
 			var distance = abs(note.position.y - $HitLine.position.y)
 			if distance < 50:
+				note.hit = true
 				note.queue_free()
 				print("HIT")
 				return
 
-	print("MISS")
+	# If we get here, nothing was hit
+	register_miss()
+func register_miss():
+	miss_count += 1
+	print("MISS COUNT:", miss_count)
+
+	if miss_count >= max_misses and not game_over:
+		end_game()
