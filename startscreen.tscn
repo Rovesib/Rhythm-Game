@@ -35,4 +35,14 @@ text = "The music tapper"
 position = Vector2(167, 361)
 texture = ExtResource("4_8xq5q")
 
+[node name="Button2" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 380.0
+offset_right = 677.0
+offset_bottom = 460.0
+theme_override_fonts/font = ExtResource("2_x6rvy")
+theme_override_font_sizes/font_size = 24
+text = "quit"
+
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]
